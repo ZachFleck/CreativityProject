@@ -13,6 +13,7 @@
 		2C601B0D218B734700402495 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C601B0C218B734700402495 /* Assets.xcassets */; };
 		2C601B10218B734700402495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C601B0E218B734700402495 /* LaunchScreen.storyboard */; };
 		2C601B1B218B7D1400402495 /* CreativityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C601B1A218B7D1400402495 /* CreativityView.swift */; };
+		2CC4D714219371ED00CCF6A2 /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC4D713219371ED00CCF6A2 /* ArtCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2C601B0F218B734700402495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C601B11218B734700402495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C601B1A218B7D1400402495 /* CreativityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityView.swift; sourceTree = "<group>"; };
+		2CC4D713219371ED00CCF6A2 /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +78,8 @@
 		2C601B18218B747200402495 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2C601B05218B733B00402495 /* AppDelegate.swift */,
 				2C601B0C218B734700402495 /* Assets.xcassets */,
+				2C601B05218B733B00402495 /* AppDelegate.swift */,
 				2C601B11218B734700402495 /* Info.plist */,
 			);
 			path = Resources;
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				2C601B07218B733B00402495 /* CreativityViewController.swift */,
+				2CC4D713219371ED00CCF6A2 /* ArtCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				2C601B1B218B7D1400402495 /* CreativityView.swift in Sources */,
 				2C601B08218B733B00402495 /* CreativityViewController.swift in Sources */,
+				2CC4D714219371ED00CCF6A2 /* ArtCollectionViewController.swift in Sources */,
 				2C601B06218B733B00402495 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
