@@ -66,8 +66,8 @@
 		2C601B17218B740800402495 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2C601B0E218B734700402495 /* LaunchScreen.storyboard */,
 				2C601B09218B733B00402495 /* Main.storyboard */,
+				2C601B0E218B734700402495 /* LaunchScreen.storyboard */,
 				2C601B1A218B7D1400402495 /* CreativityView.swift */,
 			);
 			path = View;
