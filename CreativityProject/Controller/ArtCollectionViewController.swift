@@ -81,11 +81,15 @@ public class ArtCollectionViewController: UICollectionViewController
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+        
+        artCell.backgroundColor = .purple
+        artCell.artImage.image = creativeCS[indexPath.row]
+        artCell.artLabel.text = labels[indexPath.row]
     
         // Configure the cell
     
-        return cell
+        return artCell
     }
 
     // MARK: UICollectionViewDelegate
@@ -100,6 +104,19 @@ public class ArtCollectionViewController: UICollectionViewController
         let widthPerItem = availableWidth / itemsPerRowCompact
         
         return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout colletionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView,
+                               layout colletionViewLayout: UICollectionViewLayout,
+                               sizeForItemAt indexPath: Int) -> CGFloat
+    {
+        return sectionInsets.left
     }
 
     /*
