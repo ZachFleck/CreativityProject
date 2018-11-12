@@ -33,8 +33,23 @@ public class ArtCollectionViewController: UICollectionViewController
         
         ]
     }()
+    
+    private let labels : [String] =
+    {
+        return [
+            "drawing",
+            "octocat",
+            "java haiku",
+            "Mikey es creepy boy",
+            "poppin",
+            "Swift Haiku",
+            "little bill",
+            "Mainframe Haiku"
+            
+        ]
+    }()
 
-    public override func viewDidLoad()
+    public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
 
@@ -42,16 +57,16 @@ public class ArtCollectionViewController: UICollectionViewController
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
 
-    public override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
+    //public override func didReceiveMemoryWarning()
+    //{
+        //super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
+    //}
 
     /*
     // MARK: - Navigation

@@ -43,8 +43,8 @@
         <!--Art Collection View Controller-->
         <scene sceneID="u6r-Ub-hKB">
             <objects>
-                <collectionViewController id="huw-Zm-m6F" userLabel="Art Collection View Controller" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tU3-Yj-U6G" customClass="artCollectionView">
+                <collectionViewController id="huw-Zm-m6F" userLabel="Art Collection View Controller" customClass="ArtCollectionViewController" customModule="CreativityProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tU3-Yj-U6G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +56,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eH1-TR-jhl" userLabel="artIdentifier">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="eH1-TR-jhl" userLabel="artIdentifier" customClass="ArtCell" customModule="CreativityProject" customModuleProvider="target">
                                 <rect key="frame" x="87.5" y="0.0" width="200" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -76,11 +76,13 @@
                                         </label>
                                     </subviews>
                                 </view>
+                                <connections>
+                                    <outlet property="artImage" destination="rOD-Nw-fwU" id="M95-Rv-CSB"/>
+                                    <outlet property="artLabel" destination="fWk-Ph-JMu" id="64C-AO-I3g"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
-                            <outlet property="artImage" destination="rOD-Nw-fwU" id="b22-V2-QfV"/>
-                            <outlet property="artLabel" destination="fWk-Ph-JMu" id="h9J-ba-cZ9"/>
                             <outlet property="dataSource" destination="huw-Zm-m6F" id="Wu8-Gn-l4u"/>
                             <outlet property="delegate" destination="huw-Zm-m6F" id="Kdd-D3-KJ9"/>
                         </connections>
