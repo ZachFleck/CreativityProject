@@ -113,13 +113,33 @@ public class ArtCollectionViewController: UICollectionViewController
                                layout colletionViewLayout: UICollectionView,
                                sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        
         let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRowCompact
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
+    
+    public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let imageView = UIImageView(image: creativeCS[indexPath.row])
+        imageView.frame = self.view.frame
+        imageView.backgroundColor = .black
+        imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        imageView.addGestureRecognizer(tap)
+        
+        self.view.addSubview(imageView)
+    }
+    
+    @objc
+    private func dismissFullscreenImage(_ sender: UITapGestureRecognizer)
+    {
+        sender.view?.removeFromSuperview()
+    }
+    
     public func collectionView(_ collectionView: UICollectionView,
                                layout colletionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: Int) -> UIEdgeInsets
